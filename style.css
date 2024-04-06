@@ -1,0 +1,216 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #81638B;
+}
+
+.tarjeta{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+
+}
+
+.tarjeta:hover{
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2),
+    0 10px 100px rgba(0,0,0,0.5);
+}
+
+.tarjeta:hover .tarjetaFront{
+    transform: rotateY(-160deg);
+}
+
+.tarjeta:hover .happy {
+    visibility: hidden;
+}
+
+.tarjetaFront{
+    position: relative;
+    background-color: #fff6ed;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2),
+    30px 0 50px rgba(0,0,0,0.4);
+    transition: 0.06s;
+}
+
+.happy{
+    font-family: tahoma, sans-serif;
+    text-align: center;
+    color: #666666;
+    margin: 30px;
+    background-image: linear-gradient(120deg, #b695c0 0%, #dac9df 100%);
+    transition: 0.1s;
+}
+
+.globos{
+    position: absolute;
+}
+
+.globo1,
+.globo2,
+.globo3,
+.globo4,
+.globo5,
+.globo6,
+.globo7{
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+}
+
+.globo1{
+    background-color: #A3C4F3;
+    left: -10px;
+    top: 50px;
+}
+.globo2{
+    background-color: #ffcfd2;
+    left: 50px;
+    top: 20%;
+}
+.globo3{
+    background-color: #8eecf5;
+    left: 105px;
+    top: 50px;
+}
+.globo4{
+    background-color: #89FBC0;
+    left: 30px;
+    top: 95px;
+}
+
+.globo5{
+    background-color: #E4DAFD;
+    left: 170px;
+    top: 10px;
+}
+
+.globo6{
+    background-color: #DEFFA0;
+    left: 160px;
+    top:90px;
+}
+
+.globo7{
+    background-color: #fff;
+    left: 100px;
+    top:120px;
+}
+
+.globo1::before,
+.globo2::before,
+.globo3::before,
+.globo4::before,
+.globo5::before,
+.globo6::before,
+.globo7::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 155px;
+    background-color: #ffc848;
+    top: 95px;
+    left: 43px;
+}
+
+.globo1::after,
+.globo2::after,
+.globo3::after,
+.globo4::after,
+.globo5::after,
+.globo6::after,
+.globo7::after{
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent ;
+    border-left: 7px solid transparent;
+    top: 94px;
+    left: 37px;
+}
+
+.globo1::after{
+    border-bottom: 10px solid #A3C4F3;
+
+}
+
+.globo2::after{
+    border-bottom: 10px solid #ffcfd2;
+    
+}
+
+.globo3::after{
+    border-bottom: 10px solid #8eecf5;
+    
+}
+
+.globo4::after{
+    border-bottom: 10px solid #89FBC0;
+    
+}
+.globo5::after{
+    border-bottom: 10px solid #E4DAFD;
+    
+}
+
+.globo6::after{
+    border-bottom: 10px solid #DEFFA0;
+    
+}
+
+.globo7::after{
+    border-bottom: 10px solid #fff;
+    
+}
+
+.dentroTarjeta{
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+}
+
+p {
+    font-family: "Brush Script MT", cursive;
+    margin: 10px;
+    color: #333;
+}
+
+p.letra{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    color: #9b9b9b;
+}
+
+.name{
+    position: absolute;
+    left: 150px;
+    top: 290px;
+    color: #333;
+}
+
+.back {
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 30px;
+    outline-color: #333;
+    outline-style: dashed;
+}
+
+
